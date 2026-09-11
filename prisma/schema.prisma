@@ -118,3 +118,12 @@ model EventItem {
   endAt       DateTime?
   createdAt   DateTime @default(now())
 }
+
+model SiteConteudo {
+  id        String   @id @default("singleton")
+  titulo    String   @default("O site por dentro")
+  subtitulo String   @default("Um ponto de encontro pra tudo que forma a estrutura NÊMESIS.")
+  cartoes   Json     @default("[]")
+  divisoes  Json     @default("[]")
+  updatedAt DateTime @updatedAt
+}
